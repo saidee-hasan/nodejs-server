@@ -1,4 +1,6 @@
-let products = [
+import { IProduct } from "../types/product";
+
+export let products:IProduct[] = [
   {
     id: 1,
     name: "Laptop",

@@ -1,13 +1,12 @@
 import { Server, createServer, IncomingMessage, ServerResponse } from "http";
+import { routeHandler } from "./routes/product.routes";
 
 
 let server: Server;
 
 
-server = createServer((req: IncomingMessage, res: ServerResponse) => {
-  res.statusCode = 200;
-  res.setHeader("Content-Type", "text/plain");
-  res.end("Hello, world!\n");
+server = createServer((req, res) => {
+routeHandler(req,res)
 });
 
 // Start listening on port 3000
